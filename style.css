@@ -1,0 +1,869 @@
+/*<--------------------------------------------------FONTS----------------------------------------------------------->*/
+@font-face{
+    src: url("fonts/Futura Book font.ttf");
+    font-family: Futura Header;
+}
+@font-face{
+    src: url("fonts/Roboto-Black.ttf");
+    font-family: ROBOTO-BLACK;
+}
+@font-face{
+    src: url("fonts/Roboto-Bold.ttf");
+    font-family: ROBOTO-BOLD;
+}
+/*<----------------------------------------------MAIN STYLING-------------------------------------------------------->*/
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ededed;
+    margin: 0;
+}
+
+/*<--------------------------------------------HEADER STYLING-------------------------------------------------------->*/
+header div{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header ul{
+    list-style-type: none;
+    background-color: black;
+    padding: 5px;
+    margin: 0;
+    overflow: hidden;
+}
+header a{
+    font-family: "Futura Header" ,sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: inline;
+    text-align: center;
+    cursor: pointer;
+}
+
+header a:hover{
+    color:#6b87d7;
+    transition: background-color 0.3s;
+}
+
+header li{
+    float:right;
+}
+
+/*<--------------------------------------------NAVIGATION BAR STYLING------------------------------------------------>*/
+
+nav{
+    position: fixed;
+    background-color: #84A4FC;
+    width: 100%;
+    top: 0;
+    display: block;
+    margin-top: 29px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/*<------------------------------------------------------LOGO STYLING------------------------------------------------>*/
+#logo{
+    float:left;
+    width: 15%;
+    padding: 15px 0;
+    text-align: center;
+    overflow:hidden;
+}
+
+#logo div{
+    height: 35px;
+    display: flex;
+    justify-content: left;
+}
+
+#logo img{
+    scale: 90%;
+}
+/*<------------------------------------------------CATEGORIES STYLING------------------------------------------------>*/
+#categories{
+    float:left;
+    width: 15%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.dropdown {
+    border: #f6f6f6 solid 3px;
+    border-radius: 2px;
+    width: 70%;
+    height: 35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: clip;
+}
+
+.dropdown button{
+    background: none;
+    border: none;
+    transition: transform 0.2s;
+}
+
+.dropdown:hover button{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.dropdown div{
+    font-family: "Helvetica Compressed",sans-serif;
+    font-size: 1.2rem;
+    color: #f6f6f6;
+}
+
+.dropdown img{
+    height: 20px;
+}
+/*<------------------------------------------------SEARCH BAR STYLING------------------------------------------------>*/
+#search{
+    float:left;
+    width: 40%;
+    text-align: center;
+    padding: 15px 0;
+    overflow: hidden;
+}
+
+.searchbar input{
+    font-family: "Futura Header",sans-serif;
+    background: #f6f6f6;
+    border-radius: 2px;
+    width: 90%;
+    height: 35px;
+    padding: 0 40px 0 20px;
+    border: none;
+    appearance: none;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.searchbar input::-webkit-search-cancel-button{
+    display: none;
+}
+
+.searchbar button{
+    scale: 200%;
+
+    position: relative;
+    right: 35px;
+
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    transition: transform 0.2s;
+}
+.searchbar button:hover{
+    scale: 250%;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.searchbar img{
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    margin: 0;
+}
+/*<-----------------------------------------------------LOGIN STYLING------------------------------------------------>*/
+#login{
+    float:left;
+    width: 20%;
+    overflow: hidden;
+    padding: 15px 0;
+}
+.profile{
+    height: 35px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.profile div{
+    color: #f6f6f6;
+    font-family: "Futura Header",sans-serif;
+    font-size: 1.1rem;
+}
+
+#login img{
+    position: relative;
+    top: 2px;
+    height: 40px;
+}
+#login a{
+    padding: 1vw;
+    text-decoration: none;
+    color: #f6f6f6;
+}
+
+#login a:hover{
+    background-color: #6b87d7;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+/*<-----------------------------------------------------CART STYLING------------------------------------------------->*/
+#cart{
+    position: relative;
+    right: 30px;
+    float:left;
+    width: 10%;
+    overflow: hidden;
+    padding: 15px 0;
+}
+
+#cart img{
+    position: relative;
+    top: 2px;
+    height: 40px;
+}
+#cart a{
+    padding: 1vw;
+    text-decoration: none;
+    color: #f6f6f6;
+}
+
+#cart a:hover{
+    background-color: #6b87d7;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+/*<---------------------------------------------------BANNER STYLING------------------------------------------------->*/
+.banner{
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height:50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+}
+.banner img{
+    height: 30vh;
+}
+
+.banner .text pre{
+    font-family: "Futura Header",sans-serif;
+    font-size: 3em;
+}
+
+.banner .dummy{
+    width: 20%;
+}
+/*<------------------------------------------------SUBBANNER STYLING------------------------------------------------->*/
+.subbanner{
+    border: #f6f6f6 solid 10px;
+    position: relative;
+    top: 85px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.subbanner div{
+    color: #333333;
+    border-right: #333333 solid;
+    font-family: "Futura Header",sans-serif;
+    background-color: #f6f6f6;
+    padding: 5px;
+    font-size: 1.5em;
+    width: 33.333333333333333%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subbanner #last{
+    border-right: #f6f6f6 solid;
+}
+
+.subbanner img{
+    height: 20px;
+    scale: 350%;
+    padding-right: 20px;
+}
+
+.separator{
+    position: relative;
+    top: 120px;
+    display: flex;
+    justify-content: center;
+    font-family: "Futura Header",sans-serif;
+    font-size: 2em;
+}
+/*<------------------------------------------------CONTAINER STYLING------------------------------------------------->*/
+.container{
+    position: relative;
+    top: 110px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 0.2em
+}
+
+.item{
+    width: 500px;
+    height: 500px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item .inner{
+    width: 400px;
+    height: 400px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+.inner:hover{
+    transform: scale(1.1);
+}
+.item .add{
+    font-family: "Helvetica Compressed",sans-serif;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: #6b87d7;
+    transition: transform 0.3s;
+}
+.item .add:hover{
+    transform: scale(1.2);
+}
+.add a{
+    color: white;
+    text-decoration: none;
+}
+.item img{
+    height: 200px;
+}
+
+.name{
+    font-family: "Helvetica Compressed",sans-serif;
+    font-size: 1.2em;
+    padding: 5px;
+    text-align: center;
+}
+.specs{
+    font-family: "Helvetica Compressed",sans-serif;
+    color: #2e2e2e;
+    padding: 5px;
+    text-align: center;
+}
+.price{
+    color: #777777;
+    font-family: "Helvetica Compressed",sans-serif;
+    font-size: 1.5em;
+    padding: 5px;
+}
+/*<--------------------------------------------FOOTER STYLING-------------------------------------------------------->*/
+footer{
+    position: relative;
+    top: 150px;
+}
+
+.top{
+    background-color:#84A4FC;
+    height: 100px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.top img{
+    width: 50px;
+    transition: transform 0.3s;
+}
+
+.top a{
+    padding: 10px;
+}
+.top img:hover{
+    transform: scale(1.1);
+}
+
+.bottom{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+}
+.bottom p{
+    color: white;
+    font-family: "Futura Header",sans-serif;
+    float: left;
+}
+
+.bottom a{
+    color: white;
+}
+/*<---------------------------------------------MARGIN OPTIMIZATION MID---------------------------------------------->*/
+@media (max-width: 1500px) {
+    .dropdown {
+        border: #f6f6f6 solid 3px;
+        border-radius: 2px;
+        width: 70%;
+        height: 35px;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        overflow: clip;
+    }
+
+    #logo div{
+        position: relative;
+        top: 6px;
+        height: 20px;
+        display: flex;
+        justify-content: left;
+    }
+
+    #logo img{
+        scale: 80%;
+    }
+
+    #login{
+        float:left;
+        width: 15%;
+        overflow: hidden;
+        padding: 15px 0;
+    }
+    #cart{
+        position: relative;
+        right: 30px;
+        float:left;
+        width: 15%;
+        overflow: hidden;
+        padding: 15px 0;
+    }
+
+    .banner .dummy{
+        width: 0;
+    }
+    .banner .text pre{
+        font-family: "Futura Header",sans-serif;
+        font-size: 2em;
+    }
+
+    .banner img{
+        height: 25vh;
+    }
+
+    .subbanner img{
+        scale: 250%;
+        padding-left: 20px;
+    }
+
+}
+
+/*<-------------------------------------------MARGIN OPTIMIZATION PHONE---------------------------------------------->*/
+@media (max-width: 750px){
+
+    header ul{
+        list-style-type: none;
+        background-color: black;
+        padding: 2px;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    header a{
+        font-family: "Futura Header" ,sans-serif;
+        font-size: 0.8em;
+        color: white;
+        text-decoration: none;
+        padding: 5px;
+        display: inline;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    /*<--------------------------------------------NAVIGATION BAR STYLING-------------------------------------------->*/
+
+    nav{
+        position: fixed;
+        background-color: #84A4FC;
+        width: 100%;
+        top: 0;
+        display: block;
+        margin-top: 22px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.13);
+        z-index: 1000;
+    }
+
+
+    /*<------------------------------------------------------LOGO STYLING-------------------------------------------->*/
+    #logo{
+        float:left;
+        width: 15%;
+        padding: 15px 0;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    #logo div{
+        height: 10px;
+        display: flex;
+        justify-content: left;
+    }
+
+    #logo img{
+        scale: 90%;
+    }
+    /*<------------------------------------------------CATEGORIES STYLING-------------------------------------------->*/
+    #categories{
+        float:left;
+        width: 15%;
+        padding: 12px 0;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .dropdown {
+        border: #f6f6f6 solid 2px;
+        border-radius: 2px;
+        width: 70%;
+        height: 25px;
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+        overflow: clip;
+    }
+
+    .dropdown button{
+        background: none;
+        border: none;
+        transition: transform 0.2s;
+    }
+
+    .dropdown:hover button{
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    .dropdown div{
+        font-family: "Helvetica Compressed",sans-serif;
+        font-size: 0.5rem;
+        color: #84A4FC;;
+    }
+
+    .dropdown img{
+        position: relative;
+        height: 20px;
+        right: 25px
+
+    }
+    /*<------------------------------------------------SEARCH BAR STYLING-------------------------------------------->*/
+    #search{
+        float:left;
+        width: 40%;
+        text-align: center;
+        padding: 12px 0;
+        overflow: hidden;
+    }
+
+    .searchbar input{
+        font-family: "Futura Header",sans-serif;
+        font-size: 0.5rem;
+        background: #f6f6f6;
+        border-radius: 2px;
+
+        width: 90%;
+        height: 20px;
+        padding: 0 20px 0 10px;
+
+        border: none;
+        appearance: none;
+        outline: none;
+        -webkit-appearance: none;
+    }
+
+    .searchbar input::-webkit-search-cancel-button{
+        display: none;
+    }
+
+    .searchbar button{
+        scale: 100%;
+
+        position: relative;
+        right: 20px;
+        top: 2px;
+
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+
+        transition: transform 0.2s;
+    }
+    .searchbar button:hover{
+        scale: 250%;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    .searchbar img{
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        margin: 0;
+    }
+    /*<-----------------------------------------------------LOGIN STYLING-------------------------------------------->*/
+    #login{
+        width: 15%;
+        overflow: hidden;
+        padding: 5px;
+    }
+
+    .profile div{
+        color: #f6f6f6;
+        position: relative;
+        font-family: "Futura Header",sans-serif;
+        font-size: 0.8rem;
+        top: 2px;
+        padding: 0;
+    }
+
+    #login img{
+        position: relative;
+        top: 2px;
+        left: 2px;
+        height: 20px;
+    }
+    #login a{
+        text-decoration: none;
+        color: #f6f6f6;
+        padding: 0;
+    }
+
+    #login a:hover{
+        background-color: #6b87d7;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        padding: 0;
+    }
+    /*<-----------------------------------------------------CART STYLING--------------------------------------------->*/
+    #cart{
+        width: 15%;
+        overflow: hidden;
+        position: relative;
+        left: 0;
+        padding: 5px;
+    }
+
+    #cart img{
+        position: relative;
+        top: 2px;
+        height: 25px;
+        padding: 0;
+    }
+    #cart a{
+        text-decoration: none;
+        color: #f6f6f6;
+        padding: 0;
+    }
+
+    #cart a:hover{
+        background-color: #6b87d7;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        padding: 0;
+    }
+    /*<---------------------------------------------------BANNER STYLING--------------------------------------------->*/
+    .banner{
+        position: relative;
+        top: 100px;
+        width: 100%;
+        height:40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .banner img{
+        height: 20vh;
+    }
+
+    .banner .text pre{
+        font-family: "Futura Header",sans-serif;
+        font-size: 1em;
+        padding: 0;
+    }
+
+    .banner .dummy{
+        width: 0;
+    }
+    /*<------------------------------------------------SUBBANNER STYLING--------------------------------------------->*/
+    .subbanner{
+        border: #f6f6f6 solid 10px;
+        position: relative;
+        top: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .subbanner div{
+        color: #333333;
+        border-right: #333333 solid;
+        font-family: "Futura Header",sans-serif;
+        background-color: #f6f6f6;
+        padding: 5px;
+        font-size: 1em;
+        width: 33.333333333333333%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .subbanner #last{
+        border-right: #f6f6f6 solid;
+    }
+
+    .subbanner img{
+        height: 20px;
+        scale: 350%;
+        padding-right: 20px;
+    }
+
+    .separator{
+        position: relative;
+        top: 130px;
+        display: flex;
+        justify-content: center;
+        font-family: "Futura Header",sans-serif;
+        font-size: 2em;
+    }
+    /*<----------------------------------------------CONTAINER STYLING----------------------------------------------->*/
+    .container{
+        position: relative;
+        top: 110px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        row-gap: 0.2em
+    }
+
+    .item{
+        width: 400px;
+        height: 400px;
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item .inner{
+        width: 300px;
+        height: 300px;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s;
+    }
+    .inner:hover{
+        transform: scale(1.1);
+    }
+    .item .add{
+        font-family: "Helvetica Compressed",sans-serif;
+        width: 60%;
+        padding: 10px;
+        text-align: center;
+        color: white;
+        background-color: #6b87d7;
+        transition: transform 0.3s;
+    }
+    .item .add:hover{
+        transform: scale(1.2);
+    }
+    .add a{
+        color: white;
+        text-decoration: none;
+    }
+    .item img{
+        height: 100px;
+    }
+
+    .name{
+        font-family: "Helvetica Compressed",sans-serif;
+        font-size: 1.2em;
+        padding: 5px;
+        text-align: center;
+    }
+    .specs{
+        font-family: "Helvetica Compressed",sans-serif;
+        color: #2e2e2e;
+        padding: 5px;
+        text-align: center;
+    }
+    .price{
+        color: #777777;
+        font-family: "Helvetica Compressed",sans-serif;
+        font-size: 1.5em;
+        padding: 5px;
+    }
+    /*<------------------------------------------FOOTER STYLING------------------------------------------------------>*/
+    footer{
+        position: relative;
+        top: 150px;
+    }
+
+    .top{
+        background-color: #0c0c0c;
+        height: 100px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+
+    .top img{
+        width: 50px;
+        transition: transform 0.3s;
+    }
+
+    .top a{
+        padding: 10px;
+    }
+    .top img:hover{
+        transform: scale(1.1);
+    }
+
+    .bottom{
+        background-color: black;
+        display: flex;
+        justify-content: space-around;
+    }
+    .bottom p{
+        text-align: center;
+        color: white;
+        font-family: "Futura Header",sans-serif;
+        font-size: 0.6em;
+        float: left;
+    }
+
+    .bottom a{
+        color: white;
+    }
+
+}
