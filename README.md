@@ -1,5 +1,5 @@
 # E-commerce-Website-Front-Page
-
+![Front Page Screenshot](screenshot.png)
 This repository contains the front page of an eCommerce website, designed to deliver a seamless and engaging user experience for online shoppers. The page is built with a focus on modern design principles, usability, and responsive layout, ensuring compatibility across various devices.
 
 ## Features
